@@ -1,0 +1,42 @@
+#back-to-top,
+#go-to-bottom{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 9999;
+	width: 50px;
+    height: 50px;
+	display: block;
+	opacity: 1;
+	font-size: 18px;
+    text-align: center;
+    line-height: 55px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.fa {
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fa-chevron-up:before {
+	content: "\e113";
+}
+.fa-chevron-down:before {
+	content: "\e114";
+}
+
+#back-to-top:hover,
+#go-to-bottom:hover{
+	text-decoration: none;
+	width: 48px;
+    height: 48px;
+    right: 21px;
+    bottom: 21px;
+}

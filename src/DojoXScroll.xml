@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="DojoXScroll.widget.DojoXScroll" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+	<name>DojoX Scroll</name>
+	<description>Add a scroll to top / bottom widget based on the dojox library to your application.</description>
+
+	<icon>iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACN1BMVEUAAABLb5otWo5cfaQpVYcALHMYSYNhgKYyXIwAGGUSRH+Gn7xBaJMAB1sQQn6arsY7Yo4AFWYSRH+xwdM0XIsAHGoNQH3I09o8Yo8ACl4IPHrZ3eFBZpEACV4OQX64wcyMpMEAIWhTd6EqV4yTqsV2k7ZKb5wAMXOXrceTqsVujbFDapgNQH3///8OQHxqia9EapgzXY+6t7c8ZZZ+mblegKhQdJ9viqc7ZJQ7ZJRFbJoVRoANQH0LP3wTRYArV4wVRn8HO3oPQn4rV4sTRH8HPHoPQn4oVYoTRH8HPHoPQn4rV4wVRn8HPHoCOHgEOXkCOHgPQn4sWIwURX8HO3oNQX4cTIUHPHsPQn4qVosTRH4HPHoNQX4uWo+VqcEeTYYIPHsPQn4qVosgT4YHPHoOQX4tWo9wja8dTYUIPHsQQ38+Z5e5x9ggT4cNQX4sWY5yjrAdTYUHPHsjUoj///8fToYDOXgNQX4tWo9nhaoeToYIPHsHPHsrV4waSYENQH0LP3wQQn8uWo9igqcfToYOQn4NQH0YSYJEapdBaJc9ZpY7ZJTJ0+Big6pFbJpDaplTd6ECOHgBN3gDOHgCOHgCOHgCOHgCOHgDOHgCOHgCOHgCOHgCOHgCOHgDOHgCOHgCOHgCOHgCOHgCOHgCOHgCOHgCOHgDOXgCOHgCOHgCOHgCOHgDOHgCOHgCOHgCOHgCOHgCOHgDOHgCOHgCOHgCOHgCOHgFOnkBOHgCOHgBN3gBN3j///+N5Fs8AAAAkXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACVFGkTY+8EpRN3FKUTdxSlE3cUpRN3////FKUTd4ZzxxSlE3eVPBHHzxSlB3uVPBHHzxCUHteVPBHHzcgKP/+VPBHHz91kUofjZTgRx7/N/CBBCIgEFODwI/fkXVgAAAAFiS0dELc3aQT0AAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAHdElNRQfiAhUDDw+fPlvjAAABA0lEQVQoz2NgoCdgNLewtGJixhBnYbW2sbWzZ2NHE+fgdHCcOGmykzMXN4o4D6+L65Sp06bPcHPn40cSFxD08Jw5ddbsOXPneXkLCcPFRUR9fGfOX+DnH7Bw0YzAIDFxqLiEZHDIlKmLl4SGhS9dNn15RKSUNFhcRjYqesXUBStjYuPiE1YtW70mMUlOHiiuoJicsnbdgvWpaQxK6RmZGxZu3JSVrQyUUMnJ3bxu8Za8fAZVBrWCwqKtC7dtL1bXYGDQLCkt27GzvIJBC6hKu7KqetfumlodoISuXl19Q2MTgz7YQoPmlta29g5DENvIuLOru8cE6kTT3r7+CWZ0jSVqAADpdk1nLI6MVgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wMi0yMVQwMzoxNToxNS0wNTowMCiiOjQAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDItMjFUMDM6MTU6MTUtMDU6MDBZ/4KIAAAAGXRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjIx8SBplQAAAABJRU5ErkJggg==
+	</icon>
+
+	<properties>
+		<property key="duration" type="integer" required="true" defaultValue="2000">
+			<caption>Duration</caption>
+			<category>Scroll</category>
+			<description>How slow the scroll to top or bottom of the page will happen (in milliseconds).</description>
+		</property>
+		<property key="timeout" type="integer" required="true" defaultValue="500">
+			<caption>Timeout</caption>
+			<category>Scroll</category>
+			<description>How slow the scroll to top or bottom of the page will happen (in milliseconds).</description>
+		</property>
+		<property key="scrollContainerClass" type="string" required="true" defaultValue=".region-content :first-child">
+			<caption>Scroll Container Class</caption>
+			<category>Scroll</category>
+			<description>The class of the container on the Mendix page showing a scrollbar. Use inspect element to verify.</description>
+		</property>
+		<property key="btnBGColor" type="string" required="false" defaultValue="#E0E0E0">
+			<caption>Background Color</caption>
+			<category>Button</category>
+			<description>Hexadecimal value for the background of the button. Needs a '#' in before the 6 characters.</description>
+		</property>
+		<property key="btnArrowColor" type="string" required="false" defaultValue="#FFFFFF">
+			<caption>Button Arrow Color</caption>
+			<category>Button</category>
+			<description>Hexadecimal value for the color of the upward arrow. Needs a '#' in before the 6 characters.</description>
+		</property>
+		<property key="btnOffsetRight" type="integer" required="true" defaultValue="21">
+			<caption>Button Offset Right</caption>
+			<category>Button</category>
+			<description>The offset for the scroll to top button from the right side of the screen.</description>
+		</property>
+		<property key="btnOffsetBottom" type="integer" required="true" defaultValue="21">
+			<caption>Button Offset Bottom</caption>
+			<category>Button</category>
+			<description>The offset for the scroll to top button from the bottom of the screen.</description>
+		</property>
+		<property key="buttonClass" type="string" required="true" defaultValue="DojoXScroll">
+			<caption>Extra Buttons Class</caption>
+			<category>Button</category>
+			<description>The class of the buttons that should inherit scroll to top functionality once clicked. No need to add the '.' before the class name.</description>
+		</property>
+	</properties>
+</widget>
