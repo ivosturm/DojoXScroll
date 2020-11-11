@@ -17,10 +17,15 @@
 			<category>Scroll</category>
 			<description>How slow the scroll to top or bottom of the page will happen (in milliseconds).</description>
 		</property>
-		<property key="scrollContainerClass" type="string" required="true" defaultValue=".region-content :first-child">
+		<property key="scrollContainerClass" type="string" required="true" defaultValue=".region-content .mx-scrollcontainer-wrapper">
 			<caption>Scroll Container Class</caption>
 			<category>Scroll</category>
 			<description>The class of the container on the Mendix page showing a scrollbar. Use inspect element to verify.</description>
+		</property>
+		<property key="scrollContainerClassNthChild" type="integer" required="true" defaultValue="0">
+			<caption>Class Nth Child</caption>
+			<category>Scroll</category>
+			<description>If the CSS selector filled in in Scroll Container Class gives back an Array (can happen if multiple Scroll Containers exist for instance) here specify which element in that array is the correct one. Typically try to find the correct CSS class + element with dojo.query(class)[element].</description>
 		</property>
 		<property key="btnBGColor" type="string" required="false" defaultValue="#E0E0E0">
 			<caption>Background Color</caption>
