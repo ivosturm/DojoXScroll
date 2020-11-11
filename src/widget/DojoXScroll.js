@@ -3,9 +3,9 @@
 	========================
 
 	@file      : DojoXScroll.js
-	@version   : 1.0.0
+	@version   : 1.1.0
 	@author    : Ivo Sturm
-	@date      : 5-3-2018
+	@date      : 11-11-2020
 	@copyright : First Consulting
 	@license   : Apache V2
 
@@ -13,7 +13,7 @@
 	=============
 	
 	Add a simple scroll to top button to your Mendix page. This widget extends the dojo libraries Mendix uses by adding dojox specific libraries. In this way it is not needed to add any jQuery for instance.
-	
+	v1.1.0 - Ugraded to Mendix 8. Added scrollContainerClassNthChild setting to more easily handle pickin the nth child of the element class array you want to target
 */
 
 // Required module list. Remove unnecessary modules, you can always get them back from the boilerplate.
@@ -53,12 +53,12 @@ define([
 		},
         // Attach events to HTML dom elements
 		_setupEvents: function () {
-		
-			// important to target the correct window which has overflow hence a scrollbar
-			var region = dojo.query(this.scrollContainerClass)[0];
 			
+			// important to target the correct window which has overflow hence a scrollbar
+			var region = dojo.query(this.scrollContainerClass)[this.scrollContainerClassNthChild];
+						
 			if (!region){
-				alert(this._logNode + ' could not find region based on input class: ' + this.scrollContainerClass + '. Please check the HTML page with Inspect Element and adjust the widget settings likewise');
+				alert(this._logNode + ' could not find region based on input class: ' + this.scrollContainerClass + ' and ' + this.scrollContainerClassNthChild + 'th child. Please check the HTML page with Inspect Element and adjust the widget settings likewise');
 			}
 			
 			this._addScrollEventHandler(this.topBtn,region);
